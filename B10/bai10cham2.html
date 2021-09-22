@@ -1,0 +1,34 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta http-equiv="X-UA-Compatible" content="IE=edge">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Bai2</title>
+</head>
+
+<body>
+   <p>Nhập n: <input type="text" name="so n" id="soN"></p> 
+        <input type="button" value="KQ" onclick="tong()">  
+<script>
+    function tong()
+    {
+        var n=document.getElementById('soN').value;
+        if ((n<0) || (isNaN(n)))
+        alert("Nhập lại!!!!!!!!!!!!!!!!!!!");
+        else
+        {
+        var i=0;
+        var S=0;
+        do
+        {
+        S+=i;
+        i++;
+        }
+        while(i<=n);
+        alert('Tổng cần tìm là: '+S);
+        }
+}
+</script>
+</body>
+</html>

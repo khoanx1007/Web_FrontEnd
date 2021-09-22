@@ -1,0 +1,40 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta http-equiv="X-UA-Compatible" content="IE=edge">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Bai3</title>
+</head>
+
+<body>
+   <p>Nhập M: <input type="text" name="so m" id="soM"></p> 
+   <p>Nhập N: <input type="text" name="so n" id="soN"></p>
+   <p>Nhập K: <input type="text" name="so k" id="soK"></p>
+        <input type="button" value="KQ" onclick="tong()">  
+<script>
+    function tong()
+    {
+        var m=parseInt(document.getElementById('soM').value);
+        var n=parseInt(document.getElementById('soN').value);
+        var k=parseInt(document.getElementById('soK').value);
+        if ( (n<0) || (m<0) || (m<n))
+        alert("Nhập lại!!!!!!!!!!!!!!!!!!!");
+        else
+        {
+            var S=0;
+            do
+            {
+            if ((n%k) == 0)
+                {
+                S+=n;
+                }
+            n++;
+            }
+            while(n<=m);
+        alert('Tổng cần tìm là: '+S);
+        }
+}
+</script>
+</body>
+</html>

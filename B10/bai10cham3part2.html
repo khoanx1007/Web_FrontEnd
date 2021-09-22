@@ -1,0 +1,52 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Document</title>
+</head>
+<body>
+    <h2>Nhập số đầu tiên n:</h2>
+    <input type="text" id="soN">
+    <h2>Nhập số thứ 2 m (m>=n):</h2>
+    <input type="text" id="soM">
+    <h2>Nhập số k</h2>
+    <input type="text" id="soK">
+    <input type="button" value="tính toán" onclick="tinh()">
+    <h2>Các số chia hết cho k trong khoảng từ N đến M: <input type="text" id="soluong"></h2>
+    <h2>Tổng các số chia hết cho k trong khoảng từ N đến M: <input type="text" id="tong"></h2>
+    <script>
+        function tinh() {
+            var n = parseInt(document.getElementById('soN').value);
+            var m = parseInt(document.getElementById('soM').value);
+            var k = parseInt(document.getElementById('soK').value);
+            var sum = 0, dem = 0;
+            if (isNaN(n)) {
+                alert("Mời nhập lại số n");
+                document.getElementById('soN').value = null;
+            }
+            else if (isNaN(m) || m < n) {
+                alert("Mời nhập lại số m");
+                document.getElementById('soM').value = null;
+            }
+            else if (isNaN(k)) {
+                alert("Mời nhập lại số k");
+                document.getElementById('soK').value = null;
+            }
+            else {
+           
+                for (var i = n; i <= m; i++) {
+                    if (i % k == 0) {
+                        sum += i;
+                        dem++;
+                    }
+                }
+                console.log('so luong'+dem);
+                document.getElementById('soluong').value = dem;
+                console.log('tong la:'+sum);
+                document.getElementById('tong').value = sum;
+            }
+        }
+    </script>
+</body>
+</html>
