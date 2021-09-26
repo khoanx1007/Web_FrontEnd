@@ -1,0 +1,33 @@
+#flex{
+    display: flex;
+    flex-direction: column;
+    align-items: center;
+    width: 100%;
+}
+.item{
+    display: flex;
+    margin: 10px;
+    align-items: center;
+    box-shadow: 3px 4px 5px grey;
+    align-content: center;
+    background-color:white;
+    padding: 0px 50px 0px 50px;
+}
+.item:hover{
+    background-color:#51c4ff;
+}
+#button{
+    align-content: space-between;
+}
+#button :hover{
+    opacity: 0.5;
+}
+.check
+{
+    padding: 10px;
+    border: none;
+    margin: 5px;
+    background-color: #ff9b00;
+    font-weight: bold;
+    cursor: pointer;
+}

@@ -1,0 +1,53 @@
+<!DOCTYPE html>
+ <html lang="en">
+ <head>
+ <meta charset="UTF-8">
+ <meta name="viewport" content="width=device-width, initial-scale=1.0">
+ <title>Sức mạnh javascript</title>
+ <style>
+     .input{
+        color: white;
+        background-color:#1b8cf1;
+        border: 0;
+        padding: 5px;
+        margin-left: 10px;
+        cursor: pointer;
+     }
+ </style>
+ </head>
+ <body>
+     <p>Lorem ipsum dolor sit amet consectetur adipisicing elit. Voluptates ducimus vel, dolorem autem, dolore, temporibus modi rem iste id corrupti dolores. Deleniti dolore similique sit accusantium ipsum ratione. Aspernatur, minima.</p>
+     <span>Cỡ chữ:</span>    
+     <button class="input">Mặc định</button>
+     <button class="input">Chữ lớn</button>
+     <button class="input">Chữ nhỏ</button>
+<script>
+    var p=document.getElementsByTagName('p')[0];
+    var value=0;
+    var md=document.getElementsByTagName('button')[0]
+    {
+        md.addEventListener('click',function()
+        {
+            p.style.fontSize=100+"%";
+        })
+    }
+    var big=document.getElementsByTagName('button')[1]
+    {
+    big.addEventListener('click',function()
+    {
+        value=value+40;
+        p.style.fontSize=(100+value)+"%";
+    })
+    }
+    var small=document.getElementsByTagName('button')[2]
+    {
+    small.addEventListener('click',function()
+    {
+        value=value-40; 
+        p.style.fontSize=(100+value)+"%";
+    })
+    }
+    
+</script>
+ </body>
+ </html>
