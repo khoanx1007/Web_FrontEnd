@@ -19,22 +19,21 @@ password.addEventListener('focus', checkPassForcus);
 
 confirmPassword.addEventListener('blur', checkConfirmPassBlur);
 confirmPassword.addEventListener('focus', checkConfirmPassForcus);
-
+function showError(key,mess){
+	document.getElementById(key+'_error').innerHTML=mess;
+}
 function checkNameBlur() {
 	if(fullName.value.length < 8) {
 		fullName.style.border="1px solid red";
 		document.getElementsByTagName('i')[0].style.display="block";
 
-		document.getElementsByTagName('i')[0].addEventListener('click', function() {
-			document.querySelectorAll('.box_row p')[0].style.display="block";
-			document.querySelectorAll('.box_row p')[0].innerHTML="Tên không được để trống và phải lớn hơn 8 ký tự";
-		});
+		document.getElementsByTagName('p')[0].style.display="block";
 
 		return false;
 	}else {
 		document.getElementById('fullName').style.border="1px solid #dde3ec";
 		document.getElementsByTagName('i')[0].style.display="none";
-		document.querySelectorAll('.box_row p')[0].style.display="none";
+		document.getElementsByTagName('p')[0].style.display="none";
 
 		return true;
 	}
@@ -43,7 +42,7 @@ function checkNameBlur() {
 function checkNameForcus() {
 	fullName.style.border="1px solid #dde3ec";
 	document.getElementsByTagName('i')[0].style.display="none";
-	document.querySelectorAll('.box_row p')[0].style.display="none";
+	document.getElementsByTagName('p')[0].style.display="none";
 }
 
 function checkMailBlur() {
@@ -51,23 +50,22 @@ function checkMailBlur() {
 
 	if(email.value == "" || !filter.test(email.value)) {
 		document.getElementById('Mail').style.border="1px solid red";
-		document.getElementsByTagName('i')[2].style.display="block";
-
-		document.getElementsByTagName('i')[2].addEventListener('click', function() {
-			document.querySelectorAll('.box_row p')[2].style.display="block";
-			document.querySelectorAll('.box_row p')[2].innerHTML="Bạn vui lòng nhập lại Email";
-		});
-	}else {
+		document.getElementsByTagName('i')[1].style.display="block";
+		document.getElementsByTagName('p')[1].style.display="block";
+		
+		}
+	else {
 		document.getElementById('Mail').style.border="1px solid #dde3ec";
-		document.getElementsByTagName('i')[2].style.display="none";
-		document.querySelectorAll('.box_row p')[2].style.display="none";
+		document.getElementsByTagName('i')[1].style.display="none";
+		document.getElementsByTagName('p')[1].style.display="none";
 	}
 }
 
+
 function checkMailForcus() {
 	document.getElementById('Mail').style.border="1px solid #dde3ec";
-	document.getElementsByTagName('i')[2].style.display="none";
-	document.querySelectorAll('.box_row p')[2].style.display="none";
+	document.getElementsByTagName('i')[1].style.display="none";
+	document.getElementsByTagName('p')[1].style.display="none";
 }
 
 function checkPhoneBlur() {
@@ -75,62 +73,55 @@ function checkPhoneBlur() {
 
 	if(phoneBumber.value == "" || !filter.test(phoneBumber.value)) {
 		phoneBumber.style.border="1px solid red";
-		document.getElementsByTagName('i')[3].style.display="block";
-
-		document.getElementsByTagName('i')[3].addEventListener('click', function() {
-			document.querySelectorAll('.box_row p')[3].style.display="block";
-			document.querySelectorAll('.box_row p')[3].innerHTML="Vui lòng nhập lại số điện thoại";
-		});
+		document.getElementsByTagName('i')[2].style.display="block";
+		document.getElementsByTagName('p')[2].style.display="block";
 	}else {
 		phoneBumber.style.border="1px solid #dde3ec";
-		document.getElementsByTagName('i')[3].style.display="none";
+		document.getElementsByTagName('i')[2].style.display="none";
 	}
 }
 
 function checkPhoneForcus() {
 	document.getElementById('Phone').style.border="1px solid #dde3ec";
-	document.getElementsByTagName('i')[3].style.display="none";
-	document.querySelectorAll('.box_row p')[3].style.display="none";
+	document.getElementsByTagName('i')[2].style.display="none";
+	document.getElementsByTagName('p')[2].style.display="none";
 }
 
 function checkPassBlur() {
 	if(password.value == '' || password.value.length < 6) {
 		password.style.border="1px solid red";
-		document.getElementsByTagName('i')[4].style.display="block";
+		document.getElementsByTagName('i')[3].style.display="block";
+		document.getElementsByTagName('p')[3].style.display="block";
 
-		document.getElementsByTagName('i')[4].addEventListener('click', function() {
-			document.querySelectorAll('.box_row p')[4].style.display="block";
-			document.querySelectorAll('.box_row p')[4].innerHTML="Vui lòng nhập mật khẩu lớn hơn 6 ký tự";
-		});
 	}else {
 		password.style.border="1px solid #dde3ec";
-		document.getElementsByTagName('i')[4].style.display="none";
+		document.getElementsByTagName('i')[3].style.display="none";
 	}
 }
 
 function checkPassForcus() {
 	document.getElementById('Pass').style.border="1px solid #dde3ec";
-	document.getElementsByTagName('i')[4].style.display="none";
-	document.querySelectorAll('.box_row p')[4].style.display="none";
+	document.getElementsByTagName('i')[3].style.display="none";
+	document.getElementsByTagName('p')[3].style.display="none";
 }
 
 function checkConfirmPassBlur() {
 	if(confirmPassword.value != password.value) {
 		confirmPassword.style.border="1px solid red";
-		document.getElementsByTagName('i')[5].style.display="block";
-
-		document.getElementsByTagName('i')[5].addEventListener('click', function() {
-			document.querySelectorAll('.box_row p')[5].style.display="block";
-			document.querySelectorAll('.box_row p')[5].innerHTML="Mật khẩu không khớp";
-		});
+		document.getElementsByTagName('i')[4].style.display="block";
+		document.getElementsByTagName('p')[4].style.display="block";
 	}else {
 		confirmPassword.style.border="1px solid #dde3ec";
-		document.getElementsByTagName('i')[5].style.display="none";
+		document.getElementsByTagName('i')[4].style.display="none";
 	}
 }
 
 function checkConfirmPassForcus() {
 	document.getElementById('passConf').style.border="1px solid #dde3ec";
-	document.getElementsByTagName('i')[5].style.display="none";
-	document.querySelectorAll('.box_row p')[5].style.display="none";
+	document.getElementsByTagName('i')[4].style.display="none";
+	document.querySelectorAll('.box_row p')[4].style.display="none";
+}
+function success(){
+	if(checkNameBlur())
+		alert("Success");	
 }

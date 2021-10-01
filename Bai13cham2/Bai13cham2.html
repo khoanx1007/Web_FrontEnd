@@ -15,48 +15,46 @@
                 <span class="row_text">Họ và tên</span>
                 <input type="text" id="fullName" placeholder="Nhập họ tên..." class="row_text">
                 <i class="error fas fa-exclamation-circle"  aria-hidden="true"></i>
-					 <p class="error"></p>  
+					 <p id="username_error" class="error-text">Again</p> 
              </div>
              <div class="box_row">
                 <span class="row_text">Giới tính</span>
                 <div class="gioitinh">
                 <input type="radio" name="gender" value="Nam" class="sex">Nam  
                 <input type="radio" name="gender" value="Nữ" class="sex">Nữ
-                </div> 
-                <i class="error fas fa-exclamation-circle"  aria-hidden="true"></i>
-					 <p class="error"></p>  
+                </div>
              </div>
              <div class="box_row">
                 <span class="row_text">Email</span>
                 <input type="text" id="Mail" placeholder="Nhập email..." class="row_text">
                 <i class="error fas fa-exclamation-circle"  aria-hidden="true"></i>
-					 <p class="error"></p>     
+					 <p id="email_error" class="error-text">Again</p>     
              </div>
              <div class="box_row">
                 <span class="row_text">Số điện thoại</span>
                 <input type="text" id="Phone" placeholder="Nhập số điện thoại..." class="row_text">   
                 <i class="error fas fa-exclamation-circle" aria-hidden="true"></i>
-					 <p class="error"></p>  
+					 <p id="phone_error"  class="error-text">Again</p>
                </div>
              <div class="box_row">
                 <span class="row_text">Mật khẩu</span>
                 <input type="password" id="Pass" class="row_text" >   
                 <i class="error fas fa-exclamation-circle"  aria-hidden="true"></i>
-					 <p class="error"></p>  
+					 <p id="pass_error"  class="error-text">Again</p>  
              </div>
              <div class="box_row">
                 <span class="row_text">Nhập lại mật khẩu</span>
                 <input type="password" id="passConf" class="row_text">
                 <i class="error fas fa-exclamation-circle" aria-hidden="true"></i>
-					 <p class="error"></p>     
+					 <p id="passcon_error" class="error-text">Again</p>   
              </div>
         </div>
         <div class="button-click">
          <div class="button">
-             <button type="submit" id="Reg">Đăng Kí<i class="fas fa-" aria-hidden="true"></i></button>
+             <button type="submit" id="Reg" onclick="success()">Đăng Kí</button>
          </div>
          <div class="button">
-             <button type="reset" id="Del">Xoá Trắng<i class="fas fa-refresh" aria-hidden="true"></i></button>
+             <button type="reset" id="Del">Xoá Trắng</button>
          </div>
       </div>
      </div>

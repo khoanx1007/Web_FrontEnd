@@ -64,6 +64,11 @@ button{
 	border: 1px solid #32c5d2;
 	cursor: pointer;
 }
+.error-text{
+	display: none;
+	padding-left: 5px;
+	color: red;
+}
 .gioitinh{
     width: 60%;
     height: 34px;
