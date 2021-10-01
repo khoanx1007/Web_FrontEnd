@@ -84,7 +84,6 @@ i.error{
     padding-left: 10px;
 }
 p.error{
-    position: relative;
     display: none;
 	width: 200px;
 	top: 5px;

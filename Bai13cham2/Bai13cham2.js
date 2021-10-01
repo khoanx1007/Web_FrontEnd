@@ -28,13 +28,11 @@ function checkNameBlur() {
 		document.getElementsByTagName('i')[0].style.display="block";
 
 		document.getElementsByTagName('p')[0].style.display="block";
-
 		return false;
 	}else {
 		document.getElementById('fullName').style.border="1px solid #dde3ec";
 		document.getElementsByTagName('i')[0].style.display="none";
 		document.getElementsByTagName('p')[0].style.display="none";
-
 		return true;
 	}
 }
@@ -52,12 +50,13 @@ function checkMailBlur() {
 		document.getElementById('Mail').style.border="1px solid red";
 		document.getElementsByTagName('i')[1].style.display="block";
 		document.getElementsByTagName('p')[1].style.display="block";
-		
+		return false;
 		}
 	else {
 		document.getElementById('Mail').style.border="1px solid #dde3ec";
 		document.getElementsByTagName('i')[1].style.display="none";
 		document.getElementsByTagName('p')[1].style.display="none";
+		return true;
 	}
 }
 
@@ -75,9 +74,11 @@ function checkPhoneBlur() {
 		phoneBumber.style.border="1px solid red";
 		document.getElementsByTagName('i')[2].style.display="block";
 		document.getElementsByTagName('p')[2].style.display="block";
+		return false;
 	}else {
 		phoneBumber.style.border="1px solid #dde3ec";
 		document.getElementsByTagName('i')[2].style.display="none";
+		return true;
 	}
 }
 
@@ -92,10 +93,12 @@ function checkPassBlur() {
 		password.style.border="1px solid red";
 		document.getElementsByTagName('i')[3].style.display="block";
 		document.getElementsByTagName('p')[3].style.display="block";
+		return false;
 
 	}else {
 		password.style.border="1px solid #dde3ec";
 		document.getElementsByTagName('i')[3].style.display="none";
+		return true;
 	}
 }
 
@@ -110,9 +113,11 @@ function checkConfirmPassBlur() {
 		confirmPassword.style.border="1px solid red";
 		document.getElementsByTagName('i')[4].style.display="block";
 		document.getElementsByTagName('p')[4].style.display="block";
+		return false;
 	}else {
 		confirmPassword.style.border="1px solid #dde3ec";
 		document.getElementsByTagName('i')[4].style.display="none";
+		return true;
 	}
 }
 
@@ -122,6 +127,17 @@ function checkConfirmPassForcus() {
 	document.querySelectorAll('.box_row p')[4].style.display="none";
 }
 function success(){
-	if(checkNameBlur())
-		alert("Success");	
+	if(checkNameBlur()&&checkMailBlur()&&checkPhoneBlur()&&checkPassBlur()&&checkConfirmPassBlur())
+		alert("Success");
+	else
+	{
+		document.getElementsByTagName('i')[1].style.display="block";
+		document.getElementsByTagName('p')[1].style.display="block";
+		document.getElementsByTagName('i')[2].style.display="block";
+		document.getElementsByTagName('p')[2].style.display="block";
+		document.getElementsByTagName('i')[3].style.display="block";
+		document.getElementsByTagName('p')[3].style.display="block";
+		document.getElementsByTagName('i')[4].style.display="block";
+		document.getElementsByTagName('p')[4].style.display="block";
+	}	
 }
