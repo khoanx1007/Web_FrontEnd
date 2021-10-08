@@ -1,0 +1,112 @@
+*{
+    padding: 0;
+    margin: 0;
+    list-style: none;
+}
+body{
+    font-family: Belleza;
+}   
+.all{
+    width: 100%;
+    background-color:black ;
+    color:#c7a96d;
+    height: 45px;
+}
+#logo{
+    background:black;
+    width: 20%;
+    float: left;
+    font-size: 25px;
+    padding: 5px;
+}
+#menu{
+    float: right;
+}
+#menu ul{
+    width: 100%;
+    height: 45px;
+    list-style: none;
+}
+#menu ul li {
+    float: left;
+    line-height: 45px;
+    padding: 0px 25px;
+    font-size: 20px;
+    position: relative;
+}
+#menu ul li:hover{
+    cursor: pointer;
+    background:#6f282f;
+}
+#menu ul li span{
+    text-decoration: none;
+    color: #c7a96d;
+}
+#menu ul li ul{
+    display: none;
+    position: absolute;
+    left: 0;
+    width: 100%;
+    height: 400%;
+    background:black;
+    
+}
+#menu ul li ul li{
+    clear: both;
+    width: 100%;
+    border-bottom: 1px solid white;
+    padding: 0;
+    text-align: center;
+
+}
+#menu ul li:hover ul{
+    display: block;
+}
+#menu ul li:hover ul li:hover{
+    background:#6f282f;
+}
+#icon{
+    font-size: 30px;
+    line-height: 45px;
+    display: none;
+}
+#plus{
+    font-size: 12px;
+    display: none;
+}
+@media screen and (max-width:987px) {
+    #icon{
+        display: block;
+        float: right;
+        margin-right: 20px;
+        cursor: pointer;
+    }
+    #logo{
+        width: 80%;
+        position: relative;
+    }
+    #plus{
+        display: block;
+        line-height: 45px;
+        float: right;
+        cursor: pointer;
+        margin-right: 10px;
+    }
+    #menu{
+        background: black;
+        width: 60%;
+        position: absolute;
+        top:45px;
+        left: -60%;
+        clear: both;
+        border-top: 1px solid white;
+    }
+    #menu ul li{
+        clear: both;
+        text-align: center;
+        vertical-align: middle;	
+        width: 100%;
+        padding: 0;
+        border-bottom: 1px solid white;
+    }
+}
