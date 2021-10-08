@@ -1,0 +1,96 @@
+*{
+    border: 0px;
+    padding: 0px;
+}
+body{
+    background-size: cover;
+    background-image:linear-gradient(45deg, rgba(164, 233, 35, 0.541) , rgba(243, 85, 85, 0.562)),url('IMG/lofigirl.jpg');
+    display: flex;
+    justify-content: center;
+    align-items: center;
+}
+.all{
+    height: auto;
+    width: 650px;
+    background: white;
+}
+.list{
+    background-color: #f44336;
+    display: flex;
+    flex-direction: column;
+    align-items: center;
+    justify-content: center;
+    color: white;
+    font-weight: bold;
+    font-size: 25px;
+}
+#content{
+    width: 100%;
+    display: flex;
+    flex-direction: column;
+}
+.input{
+    display: flex;
+    width: 100%;
+    justify-content: center;
+    padding: 20px;
+}
+ul{
+    list-style: none;
+    padding-inline-start: 0;
+    margin: 0;
+    padding: 0;
+}
+#check{
+    width: 5%;
+}
+input{
+    width: 60%;
+    border: 0;
+    padding:5px;
+}
+button{
+    width: 10%;
+    padding: 5px;
+    border: 0;
+    background-color: #d9d9d9;
+    cursor: pointer;
+}
+.remove{
+    padding: 6px;
+    width: 5%;
+    background-color: lavender;
+    cursor: pointer;
+    border-color:lavender ;
+    right: 5px;
+}
+button :hover{
+    opacity: 0.7;
+}
+.item{
+    background-color: white;
+    color: black;
+    vertical-align: center;
+    list-style: none;
+    padding: 12px 8px 12px 8px;
+}
+ul .fa-check .fa-times{
+ position: absolute;
+ cursor: pointer;
+}
+ul .fa-times{
+    float: right;
+}
+ul .fa-times:hover{
+    color: red;
+}
+li .change{
+ background-color: #888888;
+}
+ul .fa-check{
+    float: left;
+    padding-right: 10px;
+}
+ul .fa-check:hover{
+    color: green;
+}
