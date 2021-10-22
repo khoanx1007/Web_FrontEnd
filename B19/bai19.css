@@ -1,0 +1,276 @@
+*{
+    padding: 0;
+    border: 0;
+    list-style: none;
+    font-family: Open Sans;
+}
+#all{
+    width: 100%;
+    display: flex;
+    flex-direction: column;
+    align-items: center;
+    
+}
+#content1{
+    background-image: url('IMG/assets/hero-3-bg.png');
+    position: relative;
+    display: flex;
+    flex-direction: column;
+    justify-content: center;
+    background-color: #f2f2f2;
+    align-items:center;
+    background-position: bottom;
+    background-size: cover;
+}
+#header{
+    display: flex;
+    justify-content: space-between;
+    align-items: center;
+    padding-top:10px;
+    padding-bottom: 10px;
+}
+#left-1{
+    width: 20%;
+}
+#left-1>img{
+    width: 100%;
+}
+.navi{
+    font-weight: bold;
+    color: #a8aac0;
+    display: flex;
+    width: 75%;
+    gap: 10px;
+    margin-bottom: 0px;
+    cursor: pointer;
+}
+.navi>b{
+    text-transform: uppercase;
+}
+#right-1>nav>b:hover{
+   color: #54c193;
+}
+#right-1>i{
+    display: none;
+    text-align: right;
+    font-size: 25px;
+}
+#right-1{
+    width: 75%;
+    display: flex;
+    align-items: center;
+    justify-content: space-between;
+}
+#right-1>button{
+    padding:5px 20px 5px 20px;
+    background-color:#50c594;
+    color: white;
+}
+#middle{
+    display: flex;
+    justify-content: space-between;
+    align-items: center;
+}
+#left-mid{
+    display: flex;
+    flex-direction: column;
+}
+#left-mid>b{
+    font-size: 50px;
+    max-width: 80%;
+}
+#right-mid>img{
+    width: 100%;
+    position: relative;
+}
+#icon{
+    display: grid;
+    grid-template-columns: repeat(4,1fr);
+    gap:10px;
+    width: 20%;
+}
+#icon>i{
+    font-size: 30px;
+    width: 100%;    
+}
+#but{
+    margin-top: 20px;
+}
+#but>button{
+    margin-right: 10px;
+    padding: 10px;
+    color: #50c594;
+    border: 0.5px solid #50c594;
+    cursor: pointer;
+    border-radius: 5px;
+}
+#but>button:hover{
+    background-color: #50c594;
+    color: white;
+}
+#bottom{
+    margin-top: 30px;
+    width: 80%;
+    display: flex;
+    flex-direction: column;
+    align-items: center;
+    margin-bottom: 100px;
+}
+#box{
+    display: grid;
+    grid-template-columns: repeat(4,1fr);
+    gap: 50px;
+}
+.box_inside{
+    padding: 20px;
+}
+.box_inside>p>i{
+    font-size: 40px;
+}
+#content2{
+    display: flex;
+    justify-content: space-between;
+    background-color: #f2f2f2;
+    padding-top: 80px;
+    padding-bottom: 80px;
+}
+#content2_left>img{
+    width: 100%;
+}
+#community{
+    background-color: #5c64ab;
+}
+.grid_box{
+    cursor: pointer;
+}
+.grid_box:hover{
+    box-shadow: 1px 0px 5px gray;
+    transition: 0.5s;
+}
+.textbox{
+    color: #babace;
+}
+.card-tit>button{
+    color: #50c594;
+    font-size: 20px;
+}
+#content5{
+    background-color: #f9f9fd;
+}
+#Pricebox{
+    display: grid;
+    grid-template-columns: repeat(3,1fr);
+    gap:15px;
+}
+#gachngang{
+    border-bottom: 5px grey;
+}
+.pricebox_grid{
+    background-color: white;
+}
+.pricebox_grid:hover{
+    background-color:#273a5d;
+    color: #f2f2f2;
+    transition: 0.5s;
+}
+.gachngang2{
+    border-bottom: 5px solid #59d1a7;
+}
+#content7{
+    background-color: #f9f9fd;
+}
+.alert{
+    display:none;
+}
+.error{
+    color: red;
+    font-weight: bold;
+}
+.brand-logo{
+    opacity: 0.4;
+    transition: all 0.3s ease-in-out;
+}
+.brand-logo:hover{
+    opacity: 1;
+}
+#content9{
+    background-color: #273a5d;
+}
+#content10{
+    background-color: #273a5d;
+}
+@media screen and (min-width:768px) and (max-width:991px){
+    #right-1>button{
+        display: none;
+    }
+    #right-1{
+        justify-content: right;
+    }
+    #right-1>i{
+        display: block;
+        float: right;
+    }
+    #Pricebox{
+        grid-template-columns: repeat(2,1fr);
+    }
+      #bars{
+        display: flex !important;
+        justify-content: right;
+      }
+      .navi{
+        position: absolute;
+        width: 30%;
+        background-color: white;
+        top:48px;
+        right:0;
+        display: none;
+        padding: 10px 20px;
+        box-sizing: border-box;
+      }
+      .navi>b{
+        display: block;
+        padding: 10px;
+        text-align: center;
+      }
+      .navi.active{
+        display: block;
+      }
+}
+@media screen and (min-width: 320px) and (max-width: 767px){
+    #bars{
+        display: flex !important;
+        justify-content: right;
+      }
+      .navi{
+        position: absolute;
+        width: 30%;
+        background-color: white;
+        top:45px;
+        right:0;
+        display: none;
+        padding: 10px 20px;
+        box-sizing: border-box;
+      }
+      .navi>b{
+        display: block;
+        padding: 10px;
+        text-align: center;
+      }
+      .navi.active{
+        display: block;
+      }
+    #right-1>button{
+        display: none;
+    }
+    #right-1{
+        justify-content: right;
+    }
+    #right-1>i{
+        display: block;
+        float: right;
+    }
+    #Pricebox{
+        grid-template-columns: repeat(1,1fr);
+    }
+    
+}
