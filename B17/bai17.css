@@ -44,7 +44,6 @@
     width:80% ;
 }
 .navigation-menu{
-    float: right;
     display: flex;
     align-items: center;
     min-height: 20px;
